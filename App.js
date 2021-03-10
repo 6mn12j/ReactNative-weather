@@ -9,7 +9,7 @@ const API_KEY = 'dca781ef6fedf311b9d73fb9e3efa2f5';
 export default class extends React.Component {
   state = { isLoading: true };
   getWeather = async (latitude, longitude) => {
-    const { data } = await axios.get(`http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}`);
+    const { data } = await axios.get(`http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric`);
     console.log(data);
   };
 
